@@ -1,0 +1,121 @@
+:root{
+  --main-box-color: linear-gradient(blue, yellow)
+}
+.gridSetup{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr ;
+  grid-row-gap: 20px;
+}
+
+.box1{
+  width: 50px;
+  height: 50px;
+  background-image: var(--main-box-color)
+}
+
+.clip{
+  
+  white-space: nowrap;
+  font-size: 16px;
+  width: 150px;
+  height: 20px;
+  border: 1px solid black;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+.elipsis{
+  width:150px;
+  height: 20px;
+  border: 1px solid black;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}
+.wrap{
+  height: 100px;
+  width: 50px;
+  word-wrap: break-word;
+}
+.box3{
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+}
+
+.keep{
+  width: 50px;
+  height: 100px;
+  word-break: keep-all;
+  margin-right: 20px;
+  
+}
+.break{
+  width: 50px;
+  height: 150px;
+  word-break: break-all;
+  margin-right: 20px;
+}
+.vert{
+  writing-mode: vertical-lr;
+}
+
+.box4{
+  width: 100px;
+  height: 100px;
+  background: red;
+  transform: rotate(30deg);
+  margin-top: 20px;
+}
+
+.box5{
+  width: 300px;
+  height: 300px;
+  background: red;
+  animation-name: toYellow;
+  animation-delay: 1s;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes toYellow{
+  0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  75% {background-color: green;}
+  100% {background: red;}
+}
+.box6{
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.button{
+  background: blue;
+  color: white;
+}
+.button:hover{
+  background: green;
+}
+
+.focus:focus{
+
+  background: grey;
+}
+
+.disabled{
+  height: 100px;
+}
+.disabled:disabled{
+  background: red;
+}
+.list{
+  background: blue;
+  
+}
+
+.list > li:nth-child(3){
+  background: red;
+}
